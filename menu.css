@@ -1,0 +1,80 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+
+.menu
+{  width:260px;
+   margin:60px auto 0;
+   cursor:pointer;
+   
+}
+.title
+{
+    width: 0%;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 0px;
+        border-radius: 0px;
+        position: relative;
+        box-shadow: 0 0 40px -10px #000;
+        color: #310a0a;
+        
+}
+span
+{   float:right;
+    font-size:18px!important
+}
+.dropdown
+{   width: 100%;
+    background: #2a2d34;
+    border-radius: 10px;
+    box-shadow: 0 0 40px -10px #000;
+    color: #f6f6f6;
+    margin-top: -4px;
+    max-height:0;
+    overflow:hidden;
+    transition:all .5s;
+    margin-left: -16px;
+    position:relative;
+}
+
+.down
+{
+    max-height:256px;
+}
+
+.arrow.gone
+{
+   display:block
+}
+p
+{
+  padding:15px 14px;
+  margin:0;transition:all .1s
+}
+p:hover
+{
+  background:rgb(76, 73, 223);
+  -webkit-transform:scale(1.05);
+  color:rgba(255,255,255,0.8);
+  box-shadow:0 0 30px -10px #000
+}
+
+/*--------------------menu active -------------------*/
+
+.screen.active .menu 
+{
+   opacity: 1;
+  /* transition-delay: 0.5s;*/
+   transform: translateY(0px);
+   margin-top: 0px;
+   padding-left:36px;
+   position: absolute;
+   z-index: 1;
+}
+     
+.screen .menu
+ {  width:260px;
+         margin:60px auto 0;
+         cursor:pointer;
+         opacity: 0;
+}
+.title .down .arrow .arrow.gone p

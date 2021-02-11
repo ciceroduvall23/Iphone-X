@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="editar.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+</head>
+<body>
+  <div class="capa">
+  <div class="iphoneX">
+    
+    
+    <div class="mobile">
+        <div class="screen">
+        
+          <img src="iphone.jpg" >
+
+          <div class="menu">
+            <div class="title" onclick="f()"><span class="fa fa-bars"></span>
+              <div class="arrow"></div>
+            </div>
+            <div class="dropdown">
+              <p>Inbox <span class="fa fa-inbox"></span></p>
+              <p>Settings <span class="fa fa-gear"></span></p>
+              <p>Sign Out <span class="fa fa-sign-out"></span></p>
+              <p>Sign Out <span class="fa fa-sign-out"></span></p>
+              <p>Sign Out <span class="fa fa-sign-out"></span></p>
+            </div>
+          </div>
+
+          <ul>
+            <i class="fa fa-wifi" aria-hidden="true"></i>
+            <i class="fa fa-battery-full" aria-hidden="true"></i>
+          </ul>
+
+          
+
+          <div id="data-hora"></div>        
+          </div>   
+        </div>
+        <div class="iphoneX-click"></div>
+       
+   
+  </div>
+  </div>
+
+ 
+   
+  <script>
+    // Função para formatar 1 em 01
+    const zeroFill = n => {
+      return ('0' + n).slice(-2);
+    }
+
+    // Cria intervalo
+    const interval = setInterval(() => {
+      // Pega o horário atual
+      const now = new Date();
+
+      // Formata a data conforme dd/mm/aaaa hh:ii:ss
+      const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+      // Exibe na tela usando a div#data-hora
+      document.getElementById('data-hora').innerHTML = dataHora;
+    }, 1000);
+  </script>
+  <script>
+    // Função para formatar 1 em 01
+    const zeroFill = n => {
+      return ('0' + n).slice(-2);
+    }
+
+    // Cria intervalo
+    const interval = setInterval(() => {
+      // Pega o horário atual
+      const now = new Date();
+
+      // Formata a data conforme dd/mm/aaaa hh:ii:ss
+      const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+      // Exibe na tela usando a div#data-hora
+      document.getElementById('data-hora').innerHTML = dataHora;
+    }, 1000);
+  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+             $(document).ready(function(){
+               $('.iphoneX-click').click(function(){
+                  $('.screen').toggleClass('active')
+            
+            })
+            })
+        
+            </script>
+</body>
+</html> 
